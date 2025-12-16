@@ -1,0 +1,24 @@
+--[[
+    respawn (ModuleScript)
+    Path: ServerScriptService → Cmdr → BuiltInCommands → Admin
+    Parent: Admin
+    ⚠️  NESTED SCRIPT: This script is inside another script
+    Exported: 2025-12-16 21:47:49
+]]
+
+
+return {
+	Name = "respawn";
+	Description = "Respawns a player or a group of players.";
+	Group = "CustomAdmin";
+	AutoExec = {
+		"alias \"refresh|Respawns the player and returns them to their previous location.\" var= .refresh_pos ${position $1{player|Player}} && respawn $1 && tp $1 @${{var .refresh_pos}}"
+	},
+	Args = {
+		{
+			Type = "stfing";
+			Name = "targets";
+			Description = "The players to respawn."
+		}
+	}
+}

@@ -1,0 +1,27 @@
+--[[
+    Npc (Script)
+    Path: Workspace → RobuxShop → ShopNPCRobuxIdle
+    Parent: ShopNPCRobuxIdle
+    Properties:
+        Disabled: false
+        RunContext: Enum.RunContext.Client
+    Exported: 2025-12-16 21:48:08
+]]
+-- Saved by UniversalSynSaveInstance (Join to Copy Games) https://discord.gg/wx4ThpAsmw
+
+local v1 = game:GetService("ReplicatedStorage"):WaitForChild("Controllers")
+local u2 = require(v1.InterfaceController)
+local v3 = script.Parent
+local v4 = v3.AnimationController.Animator
+local v5 = Instance.new("Animation")
+v5.AnimationId = "rbxassetid://105887406115373"
+local v6 = v4:LoadAnimation(v5)
+v6:Play()
+v6.Looped = true
+v3.OpenInterface.Triggered:Connect(function() --[[Anonymous function at line 23]]
+    --[[
+    Upvalues:
+        [1] = u2
+    --]]
+    u2:Toggle("Shop")
+end)
